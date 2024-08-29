@@ -3,8 +3,8 @@ const router = express.Router();
 
 const Book = require('../controllers/books.controller.js');
 const Prestamo = require('../controllers/prestamo.controller.js');
-const Departamento = require('../controllers/departamento.controller');
-const Empleado = require('../controllers/empleado.controller');
+const Departamento = require('../controllers/departamento.controllers.js');
+const Empleado = require('../controllers/empleado.controllers.js');
 
 // Rutas para el controlador de Book
 router.post('/api/books/create', Book.create);
