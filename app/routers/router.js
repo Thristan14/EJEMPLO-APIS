@@ -6,6 +6,7 @@ const Prestamo = require('../controllers/prestamo.controller.js');
 const Departamento = require('../controllers/departamento.controllers.js');
 const Empleado = require('../controllers/empleado.controllers.js');
 const Cliente = require('../controllers/cliente.controllers.js');
+const Proveedor = require('../controllers/proveedor.controllers.js');
 
 // Rutas para el controlador de Book
 router.post('/api/books/create', Book.create);
@@ -41,5 +42,12 @@ router.get('/api/cliente/all', Cliente.findAll);
 router.get('/api/cliente/onebyid/:id_cliente', Cliente.findById);
 router.put('/api/cliente/update/:id_cliente', Cliente.update);
 router.delete('/api/cliente/delete/:id_cliente', Cliente.delete);
+
+// Rutas para el controlador de proveedor
+router.post('/api/proveedor/create', Proveedor.create);
+router.get('/api/proveedor/all', Proveedor.findAll);
+router.get('/api/proveedor/onebyid/:id', Proveedor.findById);
+router.put('/api/proveedor/update/:id', Proveedor.update);
+router.delete('/api/proveedor/delete/:id', Proveedor.delete);
 
 module.exports = router;
