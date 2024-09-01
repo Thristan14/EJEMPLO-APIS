@@ -34,6 +34,9 @@ module.exports = (sequelize, Sequelize) => {
     estatus: {
       type: Sequelize.NUMERIC
     }
+  }, {
+    tableName: 'proveedores',  // Especifica el nombre de la tabla en la base de datos
+    timestamps: false         // Desactiva las marcas de tiempo (createdAt, updatedAt)
   });
 
   return Proveedor;
