@@ -6,7 +6,7 @@ const Prestamo = require('../controllers/prestamo.controller.js');
 const Departamento = require('../controllers/departamento.controllers.js');
 const Empleado = require('../controllers/empleado.controllers.js');
 const Cliente = require('../controllers/cliente.controllers.js');
-const Proveedor = require('../controllers/proveedor.controllers');
+const Proveedor = require('../controllers/proveedor.controllers.js');
 const Producto = require('../controllers/producto.controllers.js');
 const Factura = require('../controllers/factura.controllers.js');
 const Factura_Detallada = require('../controllers/factura_detallada.controllers.js');
@@ -46,12 +46,12 @@ router.get('/api/cliente/onebyid/:id_cliente', Cliente.findById);
 router.put('/api/cliente/update/:id_cliente', Cliente.update);
 router.delete('/api/cliente/delete/:id_cliente', Cliente.delete);
 
-// Rutas para el controlador de proveedor
-router.post('/api/proveedor/create', Proveedor.create);
-router.get('/api/proveedor/all', Proveedor.findAll);
-router.get('/api/proveedor/onebyid/:id', Proveedor.findById);
-router.put('/api/proveedor/update/:id', Proveedor.update);
-router.delete('/api/proveedor/delete/:id', Proveedor.delete);
+// Rutas para el controlador de Proveedor
+router.post('/api/proveedores/create', Proveedor.create);
+router.get('/api/proveedores/all', Proveedor.findAll);
+router.get('/api/proveedores/onebyid/:id', Proveedor.findById);
+router.put('/api/proveedores/update/:id', Proveedor.update);
+router.delete('/api/proveedores/delete/:id', Proveedor.delete);
 
 // Rutas para el controlador de producto
 router.post('/api/producto/create', Producto.create);

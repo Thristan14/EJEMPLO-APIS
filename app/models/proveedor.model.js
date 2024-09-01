@@ -1,49 +1,44 @@
-module.exports = (sequelize, Sequelize) => {
-	const Proveedor = sequelize.define('proveedor', {
-		id_proveedor: {
-			type: Sequelize.NUMERIC
-		},
-		empresa: {
-			type: Sequelize.STRING(100)
-		},
-		direccion: {
-			type: Sequelize.STRING(100)
-		},
-		telefono: {
-			type: Sequelize.NUMERIC
-		},
-		nit: {
-			type: Sequelize.STRING(30)
-		},
-		ciudad: {
-			type: Sequelize.STRING(100)
-		},
-		pais: {
-			type: Sequelize.STRING(100)
-		},
-		contacto: {
-			type: Sequelize.STRING(100)
-		},
-		email: {
-			type: Sequelize.STRING(100)
-		},
-		telefono_contacto: {
-			type: Sequelize.NUMERIC
-		},
-		estatus: {
-			type: Sequelize.NUMERIC
-		},
-		createdAt: {
-			type: Sequelize.DATE,
-			defaultValue: Sequelize.NOW,
-			allowNull: false
-		},
-		updatedAt: {
-			type: Sequelize.DATE,
-			defaultValue: Sequelize.NOW,
-			allowNull: false
-		}
-	});
+mmodule.exports = (sequelize, Sequelize) => {
+    const Proveedor = sequelize.define('proveedor', {
+        id_proveedor:{
+            autoIncrement: true,
+            type: Sequelize.INTEGER, 
+            primaryKey: true,
+            allowNull: false
+        },
+        empresa:{
+            type: Sequelize.STRING,
+        },
+        direccion:{
+            type: Sequelize.STRING,
+        },
+        telefono:{
+            type: Sequelize.INTEGER,
+        },
+        nit:{
+            type: Sequelize.STRING(30),
+        },
+        ciudad:{ 
+            type: Sequelize.STRING,
+        },
+        pais:{
+            type: Sequelize.STRING,
+        },
+        contacto:{
+            type: Sequelize.STRING,
+        },
+        email:{
+            type: Sequelize.STRING,
+        },
+        telefono_contacto: {
+            type: Sequelize.INTEGER,
+        },
+        estatus: {
+            type: Sequelize.INTEGER,
+        }
+    });
 
-	return Proveedor;
+    return Proveedor;
 }
+
+
