@@ -1,5 +1,5 @@
 module.exports = (sequelize, Sequelize) => {
-  const Factura_Detallada = sequelize.define('factura_detallas', {
+  const Factura_Detallada = sequelize.define('factura_detalladas', {
     id_factura: {
       type: Sequelize.NUMERIC,
       primaryKey: true
