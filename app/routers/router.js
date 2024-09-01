@@ -9,7 +9,7 @@ const Cliente = require('../controllers/cliente.controllers.js');
 const Proveedor = require('../controllers/proveedor.controllers.js');
 const Producto = require('../controllers/producto.controllers.js');
 const Factura = require('../controllers/factura.controllers.js');
-const Factura_Detallada = require('../controllers/factura_detallada.controllers.js');
+const Factura_Detalle = require('../controllers/factura_detalle.controllers.js');
 
 // Rutas para el controlador de Book
 router.post('/api/books/create', Book.create);
@@ -67,11 +67,11 @@ router.get('/api/factura/onebyid/:id_factura', Factura.findById);
 router.put('/api/factura/update/:id_factura', Factura.update);
 router.delete('/api/factura/delete/:id_factura', Factura.delete);
 
-// Rutas para el controlador de empleado
-router.post('/api/factura_detallada/create', Factura_Detallada.create);
-router.get('/api/factura_detallada/all', Factura_Detallada.findAll);
-router.get('/api/factura_detallada/:id', Factura_Detallada.findById);
-router.put('/api//factura_detallada/:id', Factura_Detallada.update);
-router.delete('/api/factura_detallada/delete/:id', Factura_Detallada.delete);
+// Rutas para el controlador de Factura Detalle
+router.post('/api/factura_detalle/create', Factura_detalle.create);
+router.get('/api/factura_detalle/all', Factura_detalle.findAll);
+router.get('/api/factura_detalle/onebyid/:id', Factura_detalle.findById);
+router.put('/api/factura_detalle/update/:id', Factura_detalle.update);
+router.delete('/api/factura_detalle/delete/:id', Factura_detalle.delete);
 
 module.exports = router;
