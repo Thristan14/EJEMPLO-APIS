@@ -9,7 +9,7 @@ const Cliente = require('../controllers/cliente.controllers.js');
 const Proveedor = require('../controllers/proveedor.controllers.js');
 const Producto = require('../controllers/producto.controllers.js');
 const Factura = require('../controllers/factura.controllers.js');
-const Factura_Detalle = require('../controllers/factura_detalle.controllers.js');
+const Factura_detalle = require('../controllers/factura_detalle.controllers.js');
 
 // Rutas para el controlador de Book
 router.post('/api/books/create', Book.create);
